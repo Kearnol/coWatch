@@ -31,8 +31,6 @@ function ChatRoom(props) {
         },);
         };
 
-    
-
     // const deleteMessageListener = (roomMsgID) => {
     //     setRoomMsgs((prevRoomMsgs) => {
     //         const newMessages = {...prevRoomMsgs};

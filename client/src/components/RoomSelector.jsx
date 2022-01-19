@@ -16,7 +16,8 @@ const RoomSelector =  (props) => {
         const deleteRoomListener = (room) => {
             setRooms((rooms) => {
                 let newRooms = [...rooms];
-                newRooms = newRooms.pop(room);
+                const roomIdx = newRooms.indexOf(room);
+                newRooms = newRooms.slice(0, roomIdx).concat(roomIdx+1);
                 return newRooms
             })
         }       
@@ -26,14 +27,16 @@ const RoomSelector =  (props) => {
     }, [socket])
 
     const joinRoom = (room) => {
-        socket.emit( 'join-room', room )    
+        socket.emit('join-room', room)    
     }
 
     return(
         <>
             {
-                rooms.filter((room)=> room.includes('chat_')).map((room, i)=>{return(
-                    <Link key={i} to={`/chat/${room.substr(5)}`}><button  onClick={()=> joinRoom(room)}> {room.substr(5)} </button></Link>
+                rooms.filter((room)=> room.includes('chat_')).map((room)=>{return(
+                    <Link key={room} to={`/chat/${room.substr(5)}`}>
+                        <button onClick={()=> joinRoom(room)}> {room.substr(5)} </button>
+                    </Link>
                 )})
             }
         </>

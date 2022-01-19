@@ -55,7 +55,7 @@ return(
                 </Form.Group>
                 <Form.Group className="mb-3 text-start" controlId='password'>
                     <Form.Label>Password:</Form.Label>
-                    <Form.Control type="password" value={myForm.password} name={"password"} onChange={onChangeHandler} placeholder="••••••••"/>
+                    <Form.Control type="password" value={myForm.password} name={"password"} onChange={onChangeHandler}/>
                 </Form.Group>
                 <Button variant="info" type="submit">Login</Button>
             </Form>
