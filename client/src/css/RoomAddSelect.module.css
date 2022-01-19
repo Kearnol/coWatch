@@ -1,0 +1,9 @@
+.chatRoomNav{
+    position: fixed;
+    left:10px;
+    top: 10vh;
+    height: 100vh;
+    border-right: 2px solid black;
+    padding: 10px 10px 10px 0 ;
+    
+}

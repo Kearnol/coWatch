@@ -1,0 +1,15 @@
+node_modules/
+.env
+MERN_fullStack_setup.txt
+client/README.md
+client/public/logo192.png
+client/public/logo512.png
+client/src/components/imgs/icon1.png
+client/src/components/imgs/icon2.png
+client/src/components/imgs/icon3.png
+client/src/components/imgs/icon4.png
+client/src/components/imgs/icon5.png
+client/src/components/imgs/icon6.png
+client/src/components/imgs/icon7.png
+client/src/components/imgs/icon8.png
+client/src/components/imgs/icon9.png
