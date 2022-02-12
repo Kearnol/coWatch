@@ -45,7 +45,7 @@ const Chat = ()=>{
         { socket && authorized? (
             <div>
                 <Route exact path ={'/chat'}>
-                    <div>
+                    <div className="mt-2">
                         <Messages socket={socket} />
                         <MessageInput socket={socket} />
                     </div>

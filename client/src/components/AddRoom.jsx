@@ -1,4 +1,5 @@
 import React, {useState } from 'react';
+import Button from 'react-bootstrap/Button';
 
 const AddRoom = (props) => {
     const [roomName, setRoomName] = useState("")
@@ -39,7 +40,9 @@ const AddRoom = (props) => {
         <>
         <form onSubmit={onSubmitHandler}>
             <input type="text" value={roomName} placeholder={"Add a chatroom"} onChange={onChangeHandler}/><br/>
-            <input type="submit" value={`Add Chat Room`} />
+            <Button className="mt-1" variant="primary" type="submit">
+                Add Chat Room
+            </Button>
         </form>
         {error? <p style={{color: "red"}}> {error} </p>:""}
         </>

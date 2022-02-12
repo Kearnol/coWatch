@@ -26,7 +26,7 @@ function App() {
           <Header isLoggedIn={isLoggedIn} toggleLoginStatus={ToggleLoggedIn}/>
         </div>
         <Route path={`/register`}>
-          <RegisterForm/>
+          <RegisterForm toggleLoginStatus={ToggleLoggedIn}/>
         </Route>
         <Route path={`/login`}>
           <LoginForm toggleLoginStatus={ToggleLoggedIn}/>
